@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồng hồ Tri Nguyen </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header_container">
+
+            <div class="header_top">
+                <div>
+                    <p style="color: rgba(0, 0, 0, 0.6); font-size: 1.4rem;">Thời gian của bạn xứng đáng với sự sang trọng và thanh lịch</p>
+                </div>
+                <div>
+                    <ul class="list-item-top">
+                        <li class="item-top">
+                            <i class="fa-solid fa-bell" style="margin-right: 4px;"></i>
+                            <span>Thông báo</span>
+                        </li>
+                        <li class="item-top">
+                            <span>Tiếng Việt</span>
+                            <i class="fa-solid fa-angle-down" style="margin-left: 4px;"></i>
+                        </li>
+                        <li class="item-top item-user">
+                            <i class="fa-solid fa-user" style="margin-right: 4px;"></i>
+                            <a href="#" style="color:rgba(0, 0, 0, 0.6)" class="user-info">Đăng nhập</a>
+                            <!-- <div class="my-user">
+                                <ul class="my-user-info">
+                                    <li><a href="info_user.html">Dang nhap </a></li>
+                                    <li id="logout"><a href="">Đăng xuất</a></li>
+                                </ul>
+                            </div> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_navbar">
+                <div class="logo">
+                    <a href="index.html" class="logo_navbar">TN Store</a>
+                </div>
+                <div class="header_search">
+                    <p>Nhập tên sản phẩm cần tìm</p>
+                    <button class="search-btn"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="header_cart">
+                    <a href="" class="link_cart">
+    
+                        <i class="bi bi-bag-dash cart-btn"></i>
+                    </a>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="nav_list-item">
+                    <li class="nav_item">
+                        <a href="#">THƯƠNG HIỆU</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">NAM</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">NỮ</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="">CẶP ĐÔI</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">PHỤ KIỆN</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">ƯU ĐÃI</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">LIÊN HỆ</a>
+                    </li>
+                </ul>
+                <div class="nav_cart">
+                    <a href="#" class="nav_link-cart">GIỎ HÀNG</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <div class="header_bannar">
+            <img src="image/banner-dong-ho-hai-trieu-thang-5-pc.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="hang_moi_ve">
+                <h2 class="container_title">
+                    <span class="line-left"></span>
+                    <span class="title">HÀNG MỚI VỀ</span>
+                    <span class="line-right"></span>
+                </h2>
+                <div class="new_product">
+                    <div class="list_product_item">
+                            <% if(list.length == 0) {%>
+                                <div class="product_item">
+
+                                    <p style="text-align: center;" colspan="6">Chưa có sản phẩm nào được lưu</p>
+                                </div>
+                            <% } %>
+                            <% for (let p of list){ %>
+                                <div class="product_item">
+                                    <div class="product_image">
+                                        <img src="/image/<%= p.image %>" alt="">
+                                    </div>
+                                    <p class="product_name"><%= p.name %></p>
+                                    <!-- <p><%= p.gender %></p>
+                                    <p><%= p.trademark %></p> -->
+                                    <p class="product_price"><%= p.price %> $</p>
+                                </div>
+                            <%} %>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="sp_ban_chay">
+                <h2 class="container_title">
+                    <span class="line-left"></span>
+                    <span class="title">SẢN PHẨM BÁN CHẠY</span>
+                    <span class="line-right"></span>
+                </h2>
+                <div class="new_product">
+                    <div class="list_product_item">
+                        <div class="product_item">
+                            <div class="product_image">
+                                <img src="/image/dh1.jpg" alt="">
+                            </div>
+                            <p class="product_name">Citizen C7 NH8396-82E – Nam – Automatic (tự động) – Mặt Số 40mm, Kính Cứng Cong, Trữ Cót 40 Giờ</p>
+                            <div class="product_star">
+                                <img src="image/star5.jpg" alt="">
+                            </div>
+                            <p class="product_price">9.177.000 ₫</p>
+                        </div>
+                        <div class="product_item">
+                            <div class="product_image">
+                                <img src="/image/dh1.jpg" alt="">
+                            </div>
+                            <p class="product_name">Citizen C7 NH8396-82E – Nam – Automatic (tự động) – Mặt Số 40mm, Kính Cứng Cong, Trữ Cót 40 Giờ</p>
+                            <div class="product_star">
+                                <img src="image/star5.jpg" alt="">
+                            </div>
+                            <p class="product_price">9.177.000 ₫</p>
+                        </div>
+                        <div class="product_item">
+                            <div class="product_image">
+                                <img src="/image/dh1.jpg" alt="">
+                            </div>
+                            <p class="product_name">Citizen C7 NH8396-82E – Nam – Automatic (tự động) – Mặt Số 40mm, Kính Cứng Cong, Trữ Cót 40 Giờ</p>
+                            <div class="product_star">
+                                <img src="image/star5.jpg" alt="">
+                            </div>
+                            <p class="product_price">9.177.000 ₫</p>
+                        </div>
+                        <div class="product_item">
+                            <div class="product_image">
+                                <img src="/image/dh1.jpg" alt="">
+                            </div>
+                            <p class="product_name">Citizen C7 NH8396-82E – Nam – Automatic (tự động) – Mặt Số 40mm, Kính Cứng Cong, Trữ Cót 40 Giờ</p>
+                            <div class="product_star">
+                                <img src="image/star5.jpg" alt="">
+                            </div>
+                            <p class="product_price">9.177.000 ₫</p>
+                        </div>
+                        <div class="product_item">
+                            <div class="product_image">
+                                <img src="/image/dh1.jpg" alt="">
+                            </div>
+                            <p class="product_name">Citizen C7 NH8396-82E – Nam – Automatic (tự động) – Mặt Số 40mm, Kính Cứng Cong, Trữ Cót 40 Giờ</p>
+                            <div class="product_star">
+                                <img src="image/star5.jpg" alt="">
+                            </div>
+                            <p class="product_price">9.177.000 ₫</p>
+                        </div>
+                        <div class="product_item">
+                            <div class="product_image">
+                                <img src="/image/dh1.jpg" alt="">
+                            </div>
+                            <p class="product_name">Citizen C7 NH8396-82E – Nam – Automatic (tự động) – Mặt Số 40mm, Kính Cứng Cong, Trữ Cót 40 Giờ</p>
+                            <div class="product_star">
+                                <img src="image/star5.jpg" alt="">
+                            </div>
+                            <p class="product_price">9.177.000 ₫</p>
+                        </div>
+                        <div class="product_item">
+                            <div class="product_image">
+                                <img src="/image/dh1.jpg" alt="">
+                            </div>
+                            <p class="product_name">Citizen C7 NH8396-82E – Nam – Automatic (tự động) – Mặt Số 40mm, Kính Cứng Cong, Trữ Cót 40 Giờ</p>
+                            <div class="product_star">
+                                <img src="image/star5.jpg" alt="">
+                            </div>
+                            <p class="product_price">9.177.000 ₫</p>
+                        </div>
+                        <div class="product_item">
+                            <div class="product_image">
+                                <img src="/image/dh1.jpg" alt="">
+                            </div>
+                            <p class="product_name">Citizen C7 NH8396-82E – Nam – Automatic (tự động) – Mặt Số 40mm, Kính Cứng Cong, Trữ Cót 40 Giờ</p>
+                            <div class="product_star">
+                                <img src="image/star5.jpg" alt="">
+                            </div>
+                            <p class="product_price">9.177.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_container">
+
+            <div class="footer-1">
+                <h3 class="title">CHĂM SÓC KHÁCH HÀNG</h3>
+                <ul class="list-param">
+                    <li><a href="#">Trung tâm trợ giúp</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                    <li><a href="#">Vận chuyển</a></li>
+                    <li><a href="#">Trả hàng và hoàn tiền</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-2">
+                <h3 class="title">Về TN Store</h3>
+                <ul class="list-param">
+                    <li><a href="#">Giới thiệu về TN Store</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Điều khoản TN Store</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Flash Sales</a></li>
+                </ul>
+            </div>
+            <div class="footer-3">
+                <h3 class="title">LIÊN HỆ</h3>
+                <ul class="list-param">
+                    <li><a href="#">Số điện thoại: 09181273271</a></li>
+                    <li><a href="#">Email: tn123@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-4">
+                <h3 class="title">THEO DÕI CHÚNG TÔI TRÊN</h3>
+                <ul class="list-param">
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <a href="#">Trung tâm trợ giúp</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="#">Hướng dẫn mua hàng</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
